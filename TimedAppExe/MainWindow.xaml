@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimedAppExe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="785.294" Width="997.059">
     <Grid>
-        
+        <ListView x:Name="lv_eventList" HorizontalAlignment="Left" Height="707" Margin="134,37,0,0" VerticalAlignment="Top" Width="845" Initialized="lv_eventList_Initialized">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Event Name"/>
+                    <GridViewColumn Header="Start In"/>
+                    <GridViewColumn Header="End In"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="New Event" HorizontalAlignment="Left" Margin="28,37,0,0" VerticalAlignment="Top" Width="75" Height="76" Click="Button_Click"/>
     </Grid>
 </Window>

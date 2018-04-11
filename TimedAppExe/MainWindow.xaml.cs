@@ -24,5 +24,16 @@ namespace TimedAppExe
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventElement dummyElement = new EventElement { ID = 1, Name = "Dummy", StartTimeStamp = "NULL", EndTimeStamp = "NULL" };
+            lv_eventList.Items.Add(dummyElement);
+        }
+
+        private void lv_eventList_Initialized(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
