@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="785.294" Width="997.059">
     <Grid>
-        <ListView x:Name="lv_eventList" HorizontalAlignment="Left" Height="707" Margin="134,37,0,0" VerticalAlignment="Top" Width="845" Initialized="lv_eventList_Initialized">
+        <ListView x:Name="lv_eventList" HorizontalAlignment="Left" Height="682" Margin="134,37,0,0" VerticalAlignment="Top" Width="845" Initialized="lv_eventList_Initialized" MouseRightButtonDown="lv_eventList_MouseRightButtonDown">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Event Name"/>
@@ -17,5 +17,12 @@
             </ListView.View>
         </ListView>
         <Button Content="New Event" HorizontalAlignment="Left" Margin="28,37,0,0" VerticalAlignment="Top" Width="75" Height="76" Click="Button_Click"/>
+        <Menu x:Name="lv_rightClickMenu" HorizontalAlignment="Left" Height="100" Margin="28,437,0,0" VerticalAlignment="Top" Width="100" Visibility="Hidden"/>
+        
+        <DockPanel HorizontalAlignment="Left" Height="30" LastChildFill="False" VerticalAlignment="Bottom" Width="989">
+            <StatusBar x:Name="sb_mainStatusBar" HorizontalAlignment="Left" Height="30" Margin="0,724,0,0" VerticalAlignment="Top" Width="989" DockPanel.Dock="Bottom">
+                <TextBlock Name="lblCursorPosition"/>
+            </StatusBar>
+        </DockPanel>
     </Grid>
 </Window>
